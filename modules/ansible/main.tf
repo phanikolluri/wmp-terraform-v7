@@ -1,5 +1,4 @@
 resource "null_resource" "main" {
-  name = "${var.component}-${var.env}"
 
   provisioner "remote-exec" {
     connection {

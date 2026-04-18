@@ -20,7 +20,7 @@ module "dns" {
 
   for_each = var.components
   component = each.key
-  private_ip = module.compute.private_ip
+  private_ip = module.compute[each.key].private_ip
   env = "dev"
 }
 
@@ -29,6 +29,6 @@ module "ansible" {
 
   for_each = var.components
   component = each.key
-  public_ip = module.compute.public_ip
+  public_ip = module.compute[each.key].public_ip
   env = "dev"
 }
