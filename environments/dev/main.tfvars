@@ -3,7 +3,7 @@ env = "dev"
 
 databases = {
   postgresql = {
-    instanc_type = "t3.small"
+    instance_type = "t3.small"
     ports = {
       ssh = 22
       postgresql = 5432
