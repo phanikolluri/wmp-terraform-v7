@@ -52,7 +52,7 @@ resource "null_resource" "main" {
       type = "ssh"
       user = "ec2-user"
       password = "DevOps321"
-      host = "aws_instance.main.public_ip"
+      host = aws_instance.main.public_ip
     }
     inline = [
       "sudo dnf install python3.13-pip.noarch -y",
